@@ -32,7 +32,6 @@ a, a:hover, a:focus {
     box-shadow: none;
     outline: none !important;
     border: none;
-	position: absolute;
 }
 
 .line {
@@ -44,10 +43,10 @@ a, a:hover, a:focus {
 
 .bg {
     /* The image used */
-    background-image: url("../Images/quarryTruckRear.jpg");
+    background-image: url("Resources/Images/quarryTruckRear.jpg");
 
     /* Full height */
-    height: 100vh; 
+    height: 100%; 
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -154,6 +153,7 @@ a.article, a.article:hover {
 ----------------------------------------------------- */
 #content {
     width: calc(100% - var(--sidebar-width));
+    padding: 40px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;

@@ -1,5 +1,5 @@
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
+
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "main.html"
@@ -7,8 +7,15 @@ app.config(function($routeProvider) {
     .when("/portfolio", {
         templateUrl : "portfolio.html"
     })
+	.when("/cv", {
+        templateUrl : "cv.html"
+    })
     .when("/contact", {
-        templateUrl : "contact.html"
+        templateUrl : "contact.html",
 		controller:"contactCtrl"
     });
+	
+	$locationProvider.html5Mode(true);
 });
+
+

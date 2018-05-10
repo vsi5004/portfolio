@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<base href="/">
 
         <title>Ivan Iakimenko Portfolio</title>
 
@@ -13,11 +14,13 @@
         <link rel="stylesheet" href="Resources/css/sidebar.css">
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+		<!-- AngularJS CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<!-- AngularJS Routing CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
     </head>
-    <body>
-
-
+    <body ng-app="myApp">
 
         <div class="wrapper">
             <!-- Sidebar Holder -->
@@ -28,29 +31,28 @@
 
                 <ul class="list-unstyled components">
                     <li class="active">
-                        <a href="#!/" >Home</a>
+                        <a href="/" >Home</a>
                     </li>
 					<li>
-                        <a href="#!portfolio">Portfolio</a>
+                        <a href="/portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#projectSubmenu" data-toggle="collapse" aria-expanded="false">Projects</a>
-                        <ul class="collapse list-unstyled" id="projectSubmenu">
-                            <li><a href="#!i2x1">I2X1</a></li>
-                            <li><a href="#!i2x2">I2X2</a></li>
-							<li><a href="#!jess">Jess</a></li>
-							<li><a href="#!tess">Tess</a></li>
-                            <li><a href="#!lucy">Lucy</a></li>
-							<li><a href="#!snowflakes">Snowflakes</a></li>
+                        <a data-target="#projects" data-toggle="collapse" aria-expanded="false">Projects</a>
+                        <ul class="collapse list-unstyled" id="projects">
+                            <li><a href="/i2x1">I2X1</a></li>
+                            <li><a href="/i2x2">I2X2</a></li>
+							<li><a href="/jess">Jess</a></li>
+							<li><a href="/tess">Tess</a></li>
+                            <li><a href="/lucy">Lucy</a></li>
+							<li><a href="/snowflakes">Snowflakes</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#!contact">Contact</a>
+                        <a href="/contact">Contact</a>
                     </li>
-                </ul>
-
-                <ul class="list-unstyled CTAs">
-                    <li><a href="Resources/Files/IvanIakimenkoCV.pdf" >View CV</a></li>
+					<li>
+                        <a href="/cv">View CV</a>
+                    </li>
                 </ul>
             </nav>
 
